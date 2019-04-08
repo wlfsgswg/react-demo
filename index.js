@@ -1,19 +1,11 @@
-console.log(1234);
+import React from 'react';
+import ReactDom from 'react-dom';
+import App from './src/index.jsx';
 
-function jk() {
-    new Promise((resolve, reject) => {
-        console.log(1)
-        resolve(5647)
-    }).then(name => {
-        console.log(name)
+if (module.hot) {
+    module.hot.accept('./src/index.jsx', () => {
+      ReactDom.render(<App />, document.getElementById('app'))
     })
 }
-jk()
 
-const jk2 = async () => {
-    await setTimeout(() => {
-        console.log('await 在行动')
-    }, 8000);
-    console.log('你大爷的等待')
-}
-jk2();
+ReactDom.render(<App/>,document.getElementById('app'))
