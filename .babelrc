@@ -10,5 +10,16 @@
         [
             "@babel/preset-react",
         ]
+    ],
+    // antd按需加载引入css需要下载babel-plugin-import
+    "plugins": [
+        [
+            "import",
+            {
+                "libraryName": "antd",
+                "libraryDirectory": "es",
+                "style": "css" // `style: true` 会加载 less 文件
+            }
+        ]
     ]
 }
