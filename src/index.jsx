@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './less/iconfont.less';
-import { Root } from './container';
+import Root from './container/Root.jsx';
 import { LocaleProvider } from 'antd';
 import zh_CN from 'antd/lib/locale-provider/zh_CN';
 

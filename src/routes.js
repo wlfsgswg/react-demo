@@ -16,7 +16,8 @@ const router = [
         ]
     }
 ];
-module.exports = {
+const defaultRoute = router[1].routes[0];
+export {
     router,
-    defaultRoute: router[1].routes[0]
+    defaultRoute
 };
