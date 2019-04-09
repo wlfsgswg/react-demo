@@ -1,7 +1,7 @@
 import { Home, Login, Goods, Slider } from './container'
 const router = [
     {
-        path: '/',
+        path: '/login',
         component: Login
     }, {
         component: Slider,
