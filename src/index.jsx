@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import './less/iconfont.less';
-import { Home } from './container';
+import { Root } from './container';
+import { LocaleProvider } from 'antd';
+import zh_CN from 'antd/lib/locale-provider/zh_CN';
 
 export default class App extends Component {
     render() {
         return (
-            <div>
-                <i className="iconfont icon-jinatou"></i>
-                <Home />
-            </div>
+            <LocaleProvider locale={zh_CN}><Root /></LocaleProvider>
         )
     }
 }
