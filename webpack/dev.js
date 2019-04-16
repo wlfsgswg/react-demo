@@ -16,12 +16,19 @@ module.exports = {
     devServer: {
         contentBase: './dist',
         // open: true,
-        historyApiFallback:true,
+        historyApiFallback: true,
         port: 9999,
         hot: true,
         hotOnly: true,
-        proxy:{
-            
+        host:'127.0.0.1',
+        proxy: {
+            "/api/*": {
+                target: "https://swas.mianchao-inc.com",
+                // changeOrigin: true,     //跨域
+                // pathRewrite: {
+                //     '^/api': '/'
+                // }
+            }
         }
     },
     module: {
@@ -71,6 +78,7 @@ module.exports = {
         path: resolve(__dirname, 'dist'),
         publicPath: ''//加上./会造成webpack devserver找不到特定的页面，不加会导致打包的js引入失败
     }
+
 }
 // htmlwebpackplugin会在打包结束后自动生成一个html文件，并把打包生成的js自动引入到这个文件中
 // plugins会在某一时刻自动替你做些事情

@@ -1,7 +1,17 @@
 import React, { Component } from 'react';
 import { Button } from 'antd';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 class Slider extends Component {
+    componentDidMount() {
+        axios.get('/api/global.json')
+            .then(res => {
+                console.log(res);
+            })
+            .catch(err => {
+                console.log(err)
+            });
+    }
     render() {
         return (
             <div className="wlf-home">
