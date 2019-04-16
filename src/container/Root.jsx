@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { renderRoutes } from 'react-router-config';
 // import { Provider } from 'react-redux';
-import { Home, Login, Goods, Slider } from './../container';
+// import { Home, Login, Goods, Slider } from './../container';
 
 import { router, defaultRoute } from './../routes.js';
 
@@ -12,11 +12,7 @@ class Root extends Component {
             <div className="wlf-root">
                 {/* <Provider > */}
                 <BrowserRouter>
-                    {/* {renderRoutes(router, { defaultRoute })} */}
-                    <Route exact path="/" component={Slider} />
-                    <Route path="/login" component={Login} />
-                    <Route exact path="/goods" component={Goods} />
-                    <Route path="/home" component={Home} />
+                    {renderRoutes(router, { defaultRoute })}
                 </BrowserRouter>
                 {/* </Provider> */}
             </div>

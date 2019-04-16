@@ -5,6 +5,7 @@ const router = [
         component: Login
     }, {
         component: Slider,
+        path: '/',
         routes: [
             {
                 path: '/home',
