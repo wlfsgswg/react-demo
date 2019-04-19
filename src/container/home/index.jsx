@@ -5,7 +5,7 @@ class Home extends Component {
     render() {
         return (
             <div className="wlf-home">
-                <Button type="primary">我是home</Button>
+                home
             </div>
         )
     }

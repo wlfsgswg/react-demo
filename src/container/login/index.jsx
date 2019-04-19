@@ -5,7 +5,7 @@ class Login extends Component {
     render() {
         return (
             <div className="wlf-home">
-                <Link to='./home'>
+                <Link to='./silder'>
                     <Button type="primary">登陆</Button>
                 </Link>
             </div>

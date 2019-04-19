@@ -24,7 +24,7 @@ module.exports = {
         proxy: {
             "/api/*": {
                 target: "https://swas.mianchao-inc.com",
-                // changeOrigin: true,     //跨域
+                changeOrigin: true,     //跨域
                 // pathRewrite: {
                 //     '^/api': '/'
                 // }
