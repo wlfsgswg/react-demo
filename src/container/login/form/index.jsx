@@ -1,18 +1,30 @@
 
 import React, { Component } from "react";
 import {
-    Form, Icon, Input, Button, Checkbox,
+    Form, Icon, Input, Button, Checkbox, message
 } from 'antd';
+import { withRouter } from 'react-router-dom';
+
 import "./style.less";
+
 class LoginForm extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
             if (!err) {
-                console.log('Received values of form: ', values);
+                const { userName, password, remember } = values;
+                if (userName == "adminWlf" && password == "1") {
+                    localStorage.setItem("userName", remember ? "adminWlf" : "");
+                    //跳转首页
+                    this.props.history.push('/slider');
+
+                } else {
+                    message.error('用户名或密码错误')
+                }
             }
         });
     }
+    //组件内
 
     render() {
         const { getFieldDecorator } = this.props.form;
@@ -51,4 +63,4 @@ class LoginForm extends Component {
 
 const WrappedNormalLoginForm = Form.create({ name: 'normal_login' })(LoginForm);
 
-export default WrappedNormalLoginForm;
+export default withRouter(WrappedNormalLoginForm);
