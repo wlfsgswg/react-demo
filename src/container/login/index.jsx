@@ -20,7 +20,16 @@ class Login extends Component {
         <div className="wlf-login-content">
           <LoginForm />
         </div>
-        <div className="wlf-login-bottom" >
+        <div className="wlf-login-bottom c999" >
+          <div className="wlf-login-bottom-flex">
+            <span>帮助</span>
+            <span className="p-l-20 p-r-20">隐私</span>
+            <span>条款</span>
+             </div>
+          <div>
+            Copyright&nbsp;
+            <i className="iconfont icon-Copyright" style={{fontSize:"14px"}}></i>
+            &nbsp;2019 wlf前端技术出品</div>
         </div>
       </div>
     );

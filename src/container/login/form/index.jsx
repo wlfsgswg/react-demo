@@ -23,14 +23,14 @@ class LoginForm extends Component {
                         {getFieldDecorator('userName', {
                             rules: [{ required: true, message: '请输入用户名!' }],
                         })(
-                            <Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="用户名" />
+                            <Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="用户名" size="large" />
                         )}
                     </Form.Item>
                     <Form.Item>
                         {getFieldDecorator('password', {
                             rules: [{ required: true, message: '请输入密码!' }],
                         })(
-                            <Input prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />} type="password" placeholder="密码" />
+                            <Input prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />} type="password" placeholder="密码" size="large" />
                         )}
                     </Form.Item>
                     <Form.Item>
@@ -40,8 +40,8 @@ class LoginForm extends Component {
                         })(
                             <Checkbox>记住密码</Checkbox>
                         )}
-                        <a className="login-form-forgot" href="">获取账号</a>
-                        <Button type="primary" htmlType="submit" className="login-form-button">登陆</Button>
+                        <a className="login-form-forgot" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2496436621&site=qq&menu=yes">获取账号</a>
+                        <Button type="primary" htmlType="submit" className="login-form-button" size="large">登陆</Button>
                     </Form.Item>
                 </Form>
             </div>
