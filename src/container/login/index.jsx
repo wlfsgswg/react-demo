@@ -1,15 +1,14 @@
 import React, { Component } from "react";
 import { Button } from "antd";
 import { Link } from "react-router-dom";
-import LogoImage from "./../../image/logo.jpg";
+import './style.less';
 class Login extends Component {
   render() {
     return (
-      <div className="wlf-home">
+      <div className="wlf-login">
         <Link to="./slider">
           <Button type="primary">登陆</Button>
         </Link>
-        <img src={LogoImage} alt="" />
       </div>
     );
   }

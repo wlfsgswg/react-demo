@@ -14,15 +14,15 @@ class Slider extends Component {
     }
     render() {
         return (
-            <div className="wlf-home">
+            <div className="wlf-slider">
                 <p>我是silider</p>
                 <Link to="./home">
                     <Button >去home</Button>
                 </Link>
-                <Link to="./goods">
+                <Link to="./goods"> 
                     <Button>去goods</Button>
                 </Link>
-                <Link to="./login">
+                <Link to="./">
                     <Button>登陆页</Button>
                 </Link>
             </div>
