@@ -19,46 +19,58 @@
 }
 
 //定义
-.padding(@n, @i: 1) when (@i <=@n) {
+.padding(@n, @i: 5) when (@i <=@n) {
     .p-t-@{i} {
-        padding-top: (@i)px;
+        padding-top: unit(@i, px);
     }
 
     .p-b-@{i} {
-        padding-bottom: (@i)px;
+        padding-bottom: unit(@i, px);
     }
 
     .p-l-@{i} {
-        padding-left: (@i)px;
+        padding-left: unit(@i, px);
     }
 
     .p-r-@{i} {
-        padding-right: (@i)px;
+        padding-right: unit(@i, px);
     }
 
-    .padding(@n, (@i + 1));
+    .padding(@n, (@i + 5));
 }
 
-.margin(@n, @i: 1) when (@i <=@n) {
+.margin(@n, @i: 5) when (@i <=@n) {
     .m-t-@{i} {
-        margin-top: (@i)px;
+        margin-top: unit(@i, px);
     }
 
     .m-b-@{i} {
-        margin-bottom: (@i)px;
+        margin-bottom: unit(@i, px);
     }
 
     .m-l-@{i} {
-        margin-left: (@i)px;
+        margin-left: unit(@i, px);
     }
 
     .m-r-@{i} {
-        margin-right: (@i)px;
+        margin-right: unit(@i, px);
     }
 
-    .margin(@n, (@i + 1));
+    .margin(@n, (@i + 5));
 }
 
 // 调用
 .padding(30);
 .margin(30);
+
+.c999 {
+    color: #999;
+}
+
+.c333 {
+    color: #333;
+}
+
+.c666 {
+    color: #666;
+}

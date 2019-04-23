@@ -1,26 +1,38 @@
-// @import './../../../src/less/variable.less';
-.wlf-login {
-  width: 100vw;
-  height: 100vh;
-  background: url("https://gw.alipayobjects.com/zos/rmsportal/TVYTbAXWheQpRcWDaDMu.svg")
-    no-repeat;
+@import './../../../src/less/variable.less';
+.@{prefix}-login {
+  width          : 100vw;
+  height         : 100vh;
+  background     : url("https://gw.alipayobjects.com/zos/rmsportal/TVYTbAXWheQpRcWDaDMu.svg") no-repeat;
   background-size: 100% 100%;
+
   @media screen and (max-width: 600px) {
     background-size: 600px 100%;
   }
+
   text-align: center;
-  &-top{
-    &-title{
-      .left{
-        img{
-          width: 40px;
+
+  &-top {
+    padding-top: 90px;
+    &-title {
+      padding-bottom: 10px;
+      .left {
+        img {
+          width : 40px;
           height: 40px;
         }
       }
-      .right{
 
+      .right {
+        >div{
+          font-size: 30px;
+          color: #000;
+          font-weight: 600;
+        }
       }
-      
     }
+  }
+  &-content{
+    width: 100%;
+    padding-top: 30px;
   }
 }

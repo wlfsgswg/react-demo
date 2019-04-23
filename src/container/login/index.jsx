@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import { Button } from "antd";
-import { Link } from "react-router-dom";
 import "./style.less";
 import ReactImage from '././../../image/react2.jpeg';
+import LoginForm from './form/index.jsx';
 class Login extends Component {
   render() {
     return (
@@ -16,8 +15,10 @@ class Login extends Component {
               <div>React Demo</div>
             </div>
           </div>
+          <div className="c666">React Demo 是西湖区最具影响力的 Web 设计规范</div>
         </div>
         <div className="wlf-login-content">
+          <LoginForm />
         </div>
         <div className="wlf-login-bottom" >
         </div>
