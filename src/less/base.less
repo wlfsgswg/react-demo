@@ -1,0 +1,64 @@
+.l-left {
+    float: left;
+}
+
+.r-right {
+    float: right;
+}
+
+.clearfix:after {
+    content   : ".";
+    display   : block;
+    height    : 0;
+    clear     : both;
+    visibility: hidden;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+//定义
+.padding(@n, @i: 1) when (@i <=@n) {
+    .p-t-@{i} {
+        padding-top: (@i)px;
+    }
+
+    .p-b-@{i} {
+        padding-bottom: (@i)px;
+    }
+
+    .p-l-@{i} {
+        padding-left: (@i)px;
+    }
+
+    .p-r-@{i} {
+        padding-right: (@i)px;
+    }
+
+    .padding(@n, (@i + 1));
+}
+
+.margin(@n, @i: 1) when (@i <=@n) {
+    .m-t-@{i} {
+        margin-top: (@i)px;
+    }
+
+    .m-b-@{i} {
+        margin-bottom: (@i)px;
+    }
+
+    .m-l-@{i} {
+        margin-left: (@i)px;
+    }
+
+    .m-r-@{i} {
+        margin-right: (@i)px;
+    }
+
+    .margin(@n, (@i + 1));
+}
+
+// 调用
+.padding(30);
+.margin(30);
