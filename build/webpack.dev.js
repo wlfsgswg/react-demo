@@ -21,15 +21,6 @@ module.exports = {
         hot: true,
         hotOnly: true,
         host:'127.0.0.1',
-        proxy: {
-            "/api/*": {
-                target: "https://swas.mianchao-inc.com",
-                changeOrigin: true,     //跨域
-                // pathRewrite: {
-                //     '^/api': '/'
-                // }
-            }
-        }
     },
     module: {
         rules: [

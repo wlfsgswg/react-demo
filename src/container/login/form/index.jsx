@@ -23,7 +23,6 @@ class LoginForm extends Component {
             }
         });
     }
-    //组件内
 
     render() {
         const { getFieldDecorator } = this.props.form;
