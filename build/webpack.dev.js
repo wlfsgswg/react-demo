@@ -9,7 +9,7 @@ module.exports = {
     // cheap-inline-source-map如果加个cheap，打包只告诉行，build速度更快
     // cheap-module-inline-source-map 加上module，引入的module里面的错误也能出来
     // eval打包最快
-    devtool: 'cheap-module-inline-source-map',
+    devtool: 'cheap-module-eval-source-map',
     entry: {
         bundle: './index.js'
     },
@@ -73,6 +73,9 @@ module.exports = {
         }),
         new webpack.HotModuleReplacementPlugin()
     ],
+    // optimization:{
+    //     useExports:true,
+    // },
     output: {
         filename: '[name]_[hash].js',
         path: resolve(__dirname, 'dist'),

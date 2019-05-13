@@ -16,8 +16,7 @@ class LoginForm extends Component {
                 if (userName == "adminWlf" && password == "1") {
                     localStorage.setItem("userName", remember ? "adminWlf" : "");
                     //跳转首页
-                    this.props.history.push('/slider');
-
+                    this.props.history.push('/');
                 } else {
                     message.error('用户名或密码错误')
                 }

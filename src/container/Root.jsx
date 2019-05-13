@@ -9,7 +9,7 @@ class Root extends Component {
         <BrowserRouter>
           <Switch>
             <Route exact path="/login" component={Login} />
-            <Route path="/slider" component={Slider} />
+            <Route path="/" component={Slider} />
             <Route path="/home" component={Home} />
           </Switch>
         </BrowserRouter>
