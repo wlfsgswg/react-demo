@@ -45,6 +45,7 @@ module.exports = {
             template: './index.html'
         }),
         new CleanWebpackPlugin({
+            root:resolve(__dirname, '../dist'),
             cleanOnceBeforeBuildPatterns: ['**/*', 'dist']
         })
     ],
@@ -61,7 +62,7 @@ module.exports = {
     },
     output: {
         filename: '[name]_[hash].js',
-        path: resolve(__dirname, 'dist'),
+        path: resolve(__dirname, '../dist'),
         publicPath: ''//加上./会造成webpack devserver找不到特定的页面，不加会导致打包的js引入失败
     }
 
