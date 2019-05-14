@@ -14,7 +14,8 @@ class LoginForm extends Component {
             if (!err) {
                 const { userName, password, remember } = values;
                 if (userName == "adminWlf" && password == "1") {
-                    localStorage.setItem("userName", remember ? "adminWlf" : "");
+                    localStorage.setItem("userName", "adminWlf");
+                    if (!remember) setTimeout(() => localStorage.setItem("userName", ""), 3000)
                     //跳转首页
                     this.props.history.push('/');
                 } else {

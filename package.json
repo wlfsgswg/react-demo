@@ -26,7 +26,7 @@
     "antd": "^3.16.2",
     "axios": "^0.18.0",
     "babel": "^6.23.0",
-    "babel-loader": "^8.0.5",
+    "js-loader": "^8.0.5",
     "babel-plugin-import": "^1.11.0",
     "clean-webpack-plugin": "^2.0.1",
     "core-js": "^3.0.1",

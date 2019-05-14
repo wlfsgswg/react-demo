@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import { Home, Login, Slider } from "./index";
+import { Home, Login, Slider,NotFound } from "./index";
 
 class Root extends Component {
   render() {
@@ -9,8 +9,9 @@ class Root extends Component {
         <BrowserRouter>
           <Switch>
             <Route exact path="/login" component={Login} />
-            <Route path="/" component={Slider} />
-            <Route path="/home" component={Home} />
+            <Route exact path="/" component={Slider} />
+            <Route exact path="/home" component={Home} />
+            <Route component={NotFound} />
           </Switch>
         </BrowserRouter>
       </div>
