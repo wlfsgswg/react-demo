@@ -1,9 +1,11 @@
+import { BaiDu, TtService, TtDiary } from './index.js';
 const menu = [
     {
         name: '百度',
         icon: 'mail',
         route: '/baijia',
-        children: null
+        children: null,
+        component: BaiDu
     }, {
         name: '头条',
         icon: 'mail',
@@ -13,10 +15,12 @@ const menu = [
                 name: '头条服务',
                 icon: 'mail',
                 route: '/toutiao/service',
+                component: TtService
             }, {
                 name: '头条日记',
                 icon: 'mail',
                 route: '/toutiao/diary',
+                component: TtDiary
             }
         ]
     }

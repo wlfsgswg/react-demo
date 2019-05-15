@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Button, Icon } from 'antd';
 import { withRouter, Switch, Route } from 'react-router-dom';
-// import { MySelf } from '../route/index.js';
-// import { NotFound } from './../index.js'
+import { NotFound } from './../index.js'
 import { LeftMenu } from './../../components/index.js';
+import routeMenu from './../route/routeMenu.js';
 import './style.less';
 
 class Slider extends Component {
@@ -40,9 +40,22 @@ class Slider extends Component {
                 <div className={collapsed ? "wlf-slider-container wlf-slider-container-menu-fold" : "wlf-slider-container"}>
                     <div className="wlf-slider-container-route">
                         <Switch>
-                            {/* <Route path="/myself" exact component={MySelf} />
-                            <Route component={NotFound} /> */}
-                             {/* <Route component={NotFound} />  */}
+                            {
+                                routeMenu.length != 0 && routeMenu.map(item => {
+                                    if (item.children) {
+                                        return item.children.map(it => {
+                                            return (
+                                                <Route key={it.route} path={it.route} exact component={it.component} />
+                                            )
+                                        })
+                                    } else {
+                                        return (
+                                            <Route key={item.route} path={item.route} exact component={item.component} />
+                                        )
+                                    }
+                                })
+                            }
+                            <Route component={NotFound} />
                         </Switch>
                     </div>
                 </div>
