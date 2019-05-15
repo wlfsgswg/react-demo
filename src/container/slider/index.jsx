@@ -42,6 +42,7 @@ class Slider extends Component {
                         <Switch>
                             {/* <Route path="/myself" exact component={MySelf} />
                             <Route component={NotFound} /> */}
+                             {/* <Route component={NotFound} />  */}
                         </Switch>
                     </div>
                 </div>

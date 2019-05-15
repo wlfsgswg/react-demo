@@ -1,12 +1,19 @@
 import React, { Component } from 'react';
 import { Menu, Icon } from 'antd';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 const SubMenu = Menu.SubMenu;
+const MenuItem = Menu.Item;
+import routeMenu from './../../container/route/routeMenu.js'
 
-export default class LeftMenu extends Component {
+class LeftMenu extends Component {
     constructor(props) {
         super(props)
     }
+
+    componentDidMount() {
+        console.log(this)
+    }
+
     render() {
         const { collapsed } = this.props;
         return (
@@ -17,27 +24,45 @@ export default class LeftMenu extends Component {
                 theme="dark"
                 inlineCollapsed={collapsed}
             >
-                <Menu.Item key="1">
-                    <Link to='./myself'>
-                        <Icon type="pie-chart" />
-                        <span>百家号</span>
-                    </Link>
-                </Menu.Item>
-                <SubMenu
-                    key="sub1"
-                    title={
-                        <span>
-                            <Icon type="mail" />
-                            <span>Navigation One</span>
-                        </span>
-                    }
-                >
-                    <Menu.Item key="5">Option 5</Menu.Item>
-                    <Menu.Item key="6">Option 6</Menu.Item>
-                    <Menu.Item key="7">Option 7</Menu.Item>
-                    <Menu.Item key="8">Option 8</Menu.Item>
-                </SubMenu>
+                {
+                    routeMenu.length != 0 && routeMenu.map(item => {
+                        if (!item.children) {
+                            return (
+                                <MenuItem key={item.route}>
+                                    <Link to={item.route}>
+                                        <Icon type={item.icon} />
+                                        <span>{item.name}</span>
+                                    </Link>
+                                </MenuItem>
+                            )
+                        } else {
+                            return (
+                                <SubMenu
+                                    key={item.route}
+                                    title={
+                                        <span>
+                                            <Icon type={item.icon} />
+                                            <span>{item.name}</span>
+                                        </span>
+                                    }
+                                >
+                                    {
+                                        item.children.map(it => (
+                                            <MenuItem key={it.route}>
+                                                <Link to={it.route}>
+                                                    <Icon type={it.icon} />
+                                                    <span>{it.name}</span>
+                                                </Link>
+                                            </MenuItem>
+                                        ))
+                                    }
+                                </SubMenu>
+                            )
+                        }
+                    })
+                }
             </Menu>
         )
     }
 }
+export default withRouter(LeftMenu)
