@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Menu, Icon } from 'antd';
+import { Menu } from 'antd';
 import { Link, withRouter } from 'react-router-dom';
+import { MyIcon } from './../index.js';
 const SubMenu = Menu.SubMenu;
 const MenuItem = Menu.Item;
 import routeMenu from './../../container/route/routeMenu.js'
@@ -46,7 +47,7 @@ class LeftMenu extends Component {
                             return (
                                 <MenuItem key={item.route}>
                                     <Link to={item.route}>
-                                        <Icon type={item.icon} />
+                                        <MyIcon type={item.icon} />
                                         <span>{item.name}</span>
                                     </Link>
                                 </MenuItem>
@@ -57,7 +58,7 @@ class LeftMenu extends Component {
                                     key={item.route}
                                     title={
                                         <span>
-                                            <Icon type={item.icon} />
+                                            <MyIcon type={item.icon} />
                                             <span>{item.name}</span>
                                         </span>
                                     }
@@ -66,7 +67,7 @@ class LeftMenu extends Component {
                                         item.children.map(it => (
                                             <MenuItem key={it.route}>
                                                 <Link to={it.route}>
-                                                    <Icon type={it.icon} />
+                                                    <MyIcon type={it.icon} />
                                                     <span>{it.name}</span>
                                                 </Link>
                                             </MenuItem>

@@ -2,24 +2,29 @@ import { BaiDu, TtService, TtDiary } from './index.js';
 const menu = [
     {
         name: '我的百家',
-        icon: 'mail',
+        icon: 'icon-751bianjiqi_baiduditu',
         route: '/myself',
         children: null,
         component: BaiDu
     }, {
-        name: '头条',
-        icon: 'mail',
-        route: '/toutiao',
+        name: '分析',
+        icon: 'icon-fenxi',
+        route: '/analyse',
         children: [
             {
-                name: '头条服务',
-                icon: 'mail',
-                route: '/toutiao/service',
+                name: '内容分析',
+                icon: 'icon-neirong',
+                route: '/analyse/content',
                 component: TtService
             }, {
-                name: '头条日记',
-                icon: 'mail',
-                route: '/toutiao/diary',
+                name: '粉丝分析',
+                icon: 'icon-fensi',
+                route: '/analyse/fans',
+                component: TtDiary
+            }, {
+                name: '百家号指数',
+                icon: 'icon-tubiao103',
+                route: '/analyse/index',
                 component: TtDiary
             }
         ]

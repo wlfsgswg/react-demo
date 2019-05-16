@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './less/iconfont.less';
 import './less/base.less';
 import Root from './container/Root.jsx';
 import { LocaleProvider } from 'antd';
