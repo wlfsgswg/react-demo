@@ -8,18 +8,34 @@ import routeMenu from './../../container/route/routeMenu.js'
 class LeftMenu extends Component {
     constructor(props) {
         super(props)
+        this.state = {
+            selectedKeys: '',
+            openKeys: ''
+        }
     }
 
-    componentDidMount() {
-        console.log(this)
+    componentWillMount() {
+        const { location } = this.props;
+        const src = location.pathname;
+        routeMenu.map(item => {
+            if (item.route == src) {
+                this.setState({ selectedKeys: item.route, openKeys: '' })
+            } else {
+                if (item.children) (item.children.map(it => {
+                    if (it.route == src) this.setState({ selectedKeys: it.route, openKeys: item.route })
+                }))
+            }
+        })
     }
 
     render() {
         const { collapsed } = this.props;
+        const { selectedKeys, openKeys } = this.state;
+
         return (
             <Menu
-                defaultSelectedKeys={['']}
-                defaultOpenKeys={['']}
+                defaultSelectedKeys={[selectedKeys]}
+                defaultOpenKeys={[openKeys]}
                 mode="inline"
                 theme="dark"
                 inlineCollapsed={collapsed}
