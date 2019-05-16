@@ -1,9 +1,9 @@
 import { BaiDu, TtService, TtDiary } from './index.js';
 const menu = [
     {
-        name: '百度',
+        name: '我的百家',
         icon: 'mail',
-        route: '/baijia',
+        route: '/myself',
         children: null,
         component: BaiDu
     }, {

@@ -35,7 +35,9 @@ class Slider extends Component {
                     </div>
                 </div>
                 <div className="wlf-slider-left">
-                    <LeftMenu collapsed={collapsed} />
+                    <div className={!collapsed ? "wlf-slider-left-out" : "wlf-slider-left-out wlf-slider-left-out-menu-fold"}>
+                        <LeftMenu collapsed={collapsed} />
+                    </div>
                 </div>
                 <div className={collapsed ? "wlf-slider-container wlf-slider-container-menu-fold" : "wlf-slider-container"}>
                     <div className="wlf-slider-container-route">

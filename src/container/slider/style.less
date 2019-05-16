@@ -8,11 +8,16 @@
         top     : @wlfSliderHeight;
         z-index : 3;
 
-        .ant-menu {
+        &-out{
+            width: @wlfSliderWidth;
             height: calc(100vh - @wlfSliderHeight);
+            background-color: rgb(4,20,39);
+            transition: background 0.3s, width 0.2s;
+        }
+        &-out-menu-fold{
+            width: 80px;
         }
     }
-
 
     &-top {
         height: @wlfSliderHeight;
