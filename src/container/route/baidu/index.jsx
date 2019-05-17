@@ -5,8 +5,8 @@ import { withRouter } from 'react-router-dom';
 class BaiDu extends Component {
     render() {
         return (
-            <div className="wlf-notfound">
-                百度
+            <div className="wlf-baijia">
+                
             </div>
         )
     }
