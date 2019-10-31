@@ -1,7 +1,7 @@
 import { BaiDu, TtService, TtDiary } from './index.js';
 const menu = [
     {
-        name: '我的百家',
+        name: '百度',
         icon: 'icon-751bianjiqi_baiduditu',
         route: '/myself',
         children: null,
@@ -22,7 +22,7 @@ const menu = [
                 route: '/analyse/fans',
                 component: TtDiary
             }, {
-                name: '百家号指数',
+                name: '百度',
                 icon: 'icon-tubiao103',
                 route: '/analyse/index',
                 component: TtDiary
