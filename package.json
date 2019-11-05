@@ -47,5 +47,9 @@
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "koa": "^2.11.0",
+    "koa-static": "^5.0.0",
+    "koa-views": "^6.2.1"
+  }
 }

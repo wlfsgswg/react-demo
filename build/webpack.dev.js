@@ -68,7 +68,7 @@ module.exports = {
     //     useExports:true,
     // },
     output: {
-        filename: '[name]_[hash].js',
+        filename: '[name].js',
         path: resolve(__dirname, 'dist'),
         publicPath: '/'//加上./会造成webpack devserver找不到特定的页面，不加会导致打包的js引入失败
     }
