@@ -56,6 +56,11 @@ module.exports = {
       return assetFilename.endsWith(".css") || assetFilename.endsWith(".js");
     }
   },
+  optimization: {
+    splitChunks: {
+      chunks: "all"
+    }
+  },
   output: {
     filename: "[name]_[hash].js",
     path: resolve(__dirname, "../dist")

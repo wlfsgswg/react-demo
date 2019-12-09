@@ -61,12 +61,14 @@ module.exports = {
     }),
     new webpack.HotModuleReplacementPlugin()
   ],
-  //   optimization: {
-  //     useExports: true
-  //   },
+  optimization: {
+    splitChunks: {
+      chunks: "all"
+    }
+  },
   output: {
     filename: "[name].js",
-    path: resolve(__dirname, "dist")
+    path: resolve(__dirname, "../dist")
     // publicPath: "/"
     //加上./会造成webpack devserver找不到特定的页面，不加会导致打包的js引入失败
   }

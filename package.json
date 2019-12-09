@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev-build": "npx webpack --config ./build/webpack.dev.js",
     "build": "npx webpack --config ./build/webpack.prod.js",
     "start": "npx webpack-dev-server --config ./build/webpack.dev.js"
   },
@@ -37,6 +38,7 @@
     "js-loader": "^0.1.1",
     "less": "^3.10.3",
     "less-loader": "^4.1.0",
+    "lodash": "^4.17.15",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-redux": "^7.1.1",
