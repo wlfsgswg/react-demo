@@ -1,13 +1,15 @@
-import React, { Component } from 'react';
-import './less/base.less';
-import Root from './container/Root.jsx';
-import { LocaleProvider } from 'antd';
-import zh_CN from 'antd/lib/locale-provider/zh_CN';
+import React, { Component } from "react";
+import "./less/base.less";
+import Root from "./container/Root.jsx";
+import { ConfigProvider } from "antd";
+import zh_CN from "antd/lib/locale-provider/zh_CN";
 
 export default class App extends Component {
-    render() {
-        return (
-            <LocaleProvider locale={zh_CN}><Root /></LocaleProvider>
-        )
-    }
+  render() {
+    return (
+      <ConfigProvider locale={zh_CN}>
+        <Root />
+      </ConfigProvider>
+    );
+  }
 }
