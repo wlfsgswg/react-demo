@@ -72,7 +72,9 @@ module.exports = {
   },
   output: {
     filename: "[name].js",
-    path: resolve(__dirname, "../dist")
+    path: resolve(__dirname, "../dist"),
+    // 这个东西一定要加否则js会引入出问题
+    publicPath: "/"
   }
 };
 // htmlwebpackplugin会在打包结束后自动生成一个html文件，并把打包生成的js自动引入到这个文件中
