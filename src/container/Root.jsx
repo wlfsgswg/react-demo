@@ -8,11 +8,10 @@ class Root extends Component {
       <div className="wlf-root">
         <Router>
           <Switch>
+            <Route path="/" exact component={Home} />
             <Route path="/login" exact component={Login} />
-            <Route path="/home" exact component={Home} />
-            <Route path="/ome/st" exact component={Home} />
-            <Route path="/ty" exact component={Login} />
-            <Route component={NotFound} />
+            <Route path="/login/st" exact component={NotFound} />
+            {/* <Route component={NotFound} /> */}
           </Switch>
         </Router>
       </div>
