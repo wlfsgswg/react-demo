@@ -10,6 +10,8 @@ class Root extends Component {
           <Switch>
             <Route path="/login" exact component={Login} />
             <Route path="/home" exact component={Home} />
+            <Route path="/ome/st" exact component={Home} />
+            <Route path="/ty" exact component={Login} />
             <Route component={NotFound} />
           </Switch>
         </Router>
