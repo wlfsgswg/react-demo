@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from "./node_modules/react";
 import "./style.less";
 import ReactImage from '././../../image/react2.jpeg';
 import LoginForm from './form/index.jsx';

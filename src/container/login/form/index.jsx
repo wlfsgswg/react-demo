@@ -1,9 +1,9 @@
 
-import React, { Component } from "react";
+import React, { Component } from "./node_modules/react";
 import {
     Form, Icon, Input, Button, Checkbox, message
-} from 'antd';
-import { withRouter } from 'react-router-dom';
+} from './node_modules/antd';
+import { withRouter } from './node_modules/react-router-dom';
 
 import "./style.less";
 
