@@ -12,14 +12,16 @@ class RenderRouter extends Component {
   render() {
     const { menu, router } = this.props;
     console.log(menu, router);
-    // renderRoutes(router)
+
     return (
       <div className={`${classPrefix}-component-render`}>
         <div className={`${classPrefix}-component-render-content`}>
           <Layout>
             <Sider className="render-sider">Sider</Sider>
             <Layout>
-              <Content className="render-content">Content</Content>
+              <Content className="render-content">
+                {renderRoutes(router)}
+              </Content>
             </Layout>
           </Layout>
         </div>
