@@ -1,6 +1,3 @@
-import LeftMenu from './leftMenu/index.jsx';
-import MyIcon from './myicon/index.jsx';
-export{
-    LeftMenu,
-    MyIcon
-}
+import MenuLeft from "./MenuLeft/index.jsx";
+import MyIcon from "./MyIcon/index.jsx";
+export { MenuLeft, MyIcon };

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Form, Icon, Input, Button, Checkbox, message } from "antd";
 import { withRouter } from "react-router-dom";
 
-import "./style.less";
+import "./index.less";
 
 class LoginForm extends Component {
   handleSubmit = e => {
