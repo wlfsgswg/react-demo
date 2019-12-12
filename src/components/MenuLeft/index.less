@@ -2,6 +2,33 @@
 
 .@{prefix}-component-menuleft{
     &-content{
-
+        .content{
+            &-item{
+                padding: 10px 0;
+                text-align: center;
+                color: #fff;
+                cursor: pointer;
+                .text{
+                    padding-top: 5px;
+                }
+            }
+        }
+        .active{
+            background-color: #00c1de;
+        }
+        .top-img{
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+            .img{
+                width: 40px;
+                height: 40px;
+                margin: 0 auto;
+                overflow: hidden;
+                border-radius: 50%;
+                border: 1px solid #ddd;
+                color: #fff;
+            }
+        }
     }
 }
