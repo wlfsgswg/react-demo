@@ -1,18 +1,35 @@
 @import './../../theme/variable.less';
+@layoutHeaderHeght:53px;
+@layoutFooterHeght:0px;
+.@{prefix}-menu {
+    .menu-sider {
+        height          : 100vh;
+        min-width       : 60px !important;
+        max-width       : 60px !important;
+        flex            : 0 !important;
+        background-color: #333743;
+    }
 
-.@{prefix}-menu{
-//    .menu-right{
-//        width: 100%;
-//        box-sizing: border-box;
-//        padding-left: 60px;
-//    }
-//    .menu-left{
-//        height: 100vh;
-//        width: 60px;
-//        background-color: #333743;
-//        position: fixed;
-//        left: 0;
-//        top: 0;
-//    }
-height: 100vh;
+    .menu-header {
+        background-color: #fff;
+        padding         : 10px 15px;
+        height          : @layoutHeaderHeght;
+        line-height     : 32px;
+        border-bottom: 1px solid #ddd;
+        box-shadow:0 5px 10px -5px #999;
+    }
+
+    .menu-footer {
+        padding         : 0;
+        height          : @layoutFooterHeght;
+        line-height     : @layoutFooterHeght;
+        text-align      : center;
+        background-color: #ddd;
+    }
+
+    .menu-content {
+        max-height: calc(100vh - @layoutHeaderHeght - @layoutFooterHeght);
+        overflow-y: scroll;
+        background-color: #fff;
+    }
 }
