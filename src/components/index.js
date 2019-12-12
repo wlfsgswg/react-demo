@@ -1,3 +1,4 @@
 import MenuLeft from "./MenuLeft/index.jsx";
 import MyIcon from "./MyIcon/index.jsx";
-export { MenuLeft, MyIcon };
+import RenderRouter from './RenderRouter/index.jsx'
+export { MenuLeft, MyIcon ,RenderRouter};

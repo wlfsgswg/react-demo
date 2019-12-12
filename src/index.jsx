@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./theme/base.less";
+import "./theme/common.less";
 import Root from "./container/Root.jsx";
 import { ConfigProvider } from "antd";
 

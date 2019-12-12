@@ -12,7 +12,14 @@ import {
   Tool
 } from "../container/index.js";
 // 首页
-import { Detail } from "./../container/Home/children.js";
+// 发布
+import {
+  ArticleReleased,
+  AtlasReleased,
+  CompilationReleased,
+  DynamicReleased,
+  VideoReleased
+} from "./../container/Released/children.js";
 
 export const routes = [
   {
@@ -26,12 +33,7 @@ export const routes = [
       {
         path: "/home",
         component: Home,
-        routes: [
-          {
-            path: "/home/detail",
-            component: Detail
-          }
-        ]
+        routes: []
       },
       {
         path: "/analysis",
@@ -61,7 +63,28 @@ export const routes = [
       {
         path: "/released",
         component: Released,
-        routes: []
+        routes: [
+          {
+            path: "/released/article",
+            component: ArticleReleased
+          },
+          {
+            path: "/released/atlas",
+            component: AtlasReleased
+          },
+          {
+            path: "/released/video",
+            component: VideoReleased
+          },
+          {
+            path: "/released/dynamic",
+            component: DynamicReleased
+          },
+          {
+            path: "/released/compilation",
+            component: CompilationReleased
+          }
+        ]
       },
       {
         path: "/tool",

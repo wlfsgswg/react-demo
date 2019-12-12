@@ -1,14 +1,10 @@
 import React, { Component } from "react";
-import { renderRoutes } from "react-router-config";
-
+import { released } from "./../../Router/menu.js";
+import { RenderRouter } from "./../../components/index.js";
 class Released extends Component {
   render() {
-    return (
-      <div className="wlf-home">
-        <div className="p-b-20">Released</div>
-        <div>{renderRoutes(this.props.route.routes)}</div>
-      </div>
-    );
+    const { route } = this.props;
+    return <RenderRouter menu={released} router={route.routes} />;
   }
 }
 

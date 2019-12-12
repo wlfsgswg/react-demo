@@ -1,0 +1,20 @@
+@import './../../theme/variable.less';
+@import './../../theme/base.less';
+.@{prefix}-component-render {
+    height: 100%;
+    &-content {
+        height: 100%;
+        .render-sider {
+            height          : calc(100vh - @layoutHeaderHeght);
+            min-width       : 130px !important;
+            max-width       : 130px !important;
+            flex            : 0 !important;
+            background-color: #ddd;
+        }
+        .render-content {
+            max-height: calc(100vh - @layoutHeaderHeght - @layoutFooterHeght);
+            overflow-y: scroll;
+            background-color: #fff;
+        }
+    }
+}
