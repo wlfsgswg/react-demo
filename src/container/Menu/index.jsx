@@ -1,15 +1,16 @@
 import React, { Component } from "react";
 import { renderRoutes } from "react-router-config";
 
-class Home extends Component {
+export default class Menu extends Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     return (
-      <div className="wlf-home">
-        <div className="p-b-20">home</div>
+      <div>
+        <div>Menu</div>
         <div>{renderRoutes(this.props.route.routes)}</div>
       </div>
     );
   }
 }
-
-export default Home;

@@ -1,19 +1,13 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Home, Login, NotFound } from "./index";
+import { BrowserRouter as Router } from "react-router-dom";
+import { renderRoutes } from "react-router-config";
+import { routes } from "./../Router/routes.js";
 
 class Root extends Component {
   render() {
     return (
       <div className="wlf-root">
-        <Router>
-          <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/login" exact component={Login} />
-            <Route path="/login/st" exact component={NotFound} />
-            {/* <Route component={NotFound} /> */}
-          </Switch>
-        </Router>
+        <Router>{renderRoutes(routes)}</Router>
       </div>
     );
   }
