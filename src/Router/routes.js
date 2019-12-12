@@ -7,7 +7,7 @@ import {
   Develop,
   Interaction,
   Profit,
-  Qaa,
+  Question,
   Released,
   Tool
 } from "../container/index.js";
@@ -54,8 +54,8 @@ export const routes = [
         routes: []
       },
       {
-        path: "/qaa",
-        component: Qaa,
+        path: "/question",
+        component: Question,
         routes: []
       },
       {
@@ -76,4 +76,6 @@ export const routes = [
   }
 ];
 
-export const defaultRoute = routes[1].routes ? routes[1].routes[0] : routes[0];
+export const menuItem = routes[1].routes;
+
+// export const defaultRoute = routes[1].routes ? routes[1].routes[0] : routes[0];
