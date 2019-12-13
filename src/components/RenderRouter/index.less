@@ -1,19 +1,61 @@
 @import './../../theme/variable.less';
 @import './../../theme/base.less';
+
 .@{prefix}-component-render {
     height: 100%;
+
     &-content {
         height: 100%;
+
         .render-sider {
             height          : calc(100vh - @layoutHeaderHeght);
             min-width       : 130px !important;
             max-width       : 130px !important;
             flex            : 0 !important;
-            background-color: #ddd;
+            background-color: #fff;
+            border-right    : 1px solid #ddd;
+
+            &-content {
+                &-title {
+                    padding-left: 20px;
+                    font-size   : 16px;
+                    line-height : 60px;
+                    font-weight : 600;
+                    color       : #333;
+                }
+
+                &-item {
+                    >a {
+                        >div {
+                            line-height: 20px;
+                            padding    : 10px 0 10px 20px;
+                            color      : #666;
+                            position   : relative;
+                        }
+                    }
+                }
+            }
+
+            .active {
+                color        : #00c1de;
+                border-top   : 1px solid #ddd;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .active:after {
+                content         : '';
+                position        : absolute;
+                top             : 0;
+                right           : -1px;
+                bottom          : 0;
+                width           : 1px;
+                background-color: #fff;
+            }
         }
+
         .render-content {
-            max-height: calc(100vh - @layoutHeaderHeght - @layoutFooterHeght);
-            overflow-y: scroll;
+            max-height      : calc(100vh - @layoutHeaderHeght - @layoutFooterHeght);
+            overflow-y      : scroll;
             background-color: #fff;
         }
     }

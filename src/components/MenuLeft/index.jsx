@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { classPrefix } from "./../../const/index.js";
 import { Link, withRouter } from "react-router-dom";
+import { routeMatching } from "./../../util/index.js";
 import MyIcon from "./../MyIcon/index.jsx";
 import "./index.less";
 const menu = [
@@ -57,7 +58,7 @@ const menu = [
 const focusFromKey = e => {
   let focus;
   menu.map(it => {
-    if (it.path.split("/")[1] === e) focus = it.key;
+    if (it.path === e) focus = it.key;
   });
   return focus;
 };
@@ -71,9 +72,8 @@ class MenuLeft extends Component {
   }
 
   componentDidMount() {
-    const path = this.props.location && this.props.location.pathname;
-    const arr = path.split("/");
-    const focus = focusFromKey(arr[1]);
+    const path = routeMatching(this.props.location.pathname);
+    const focus = focusFromKey(path);
     this.setState({ focus });
   }
 
