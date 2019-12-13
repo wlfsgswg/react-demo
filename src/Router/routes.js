@@ -21,6 +21,13 @@ import {
   VideoReleased,
   QuestionReleased
 } from "./../container/Released/children.js";
+// 管理
+import {
+  CommentAdmin,
+  ContentAdmin,
+  FansAdmin,
+  SourceAdmin
+} from "./../container/Admin/children.js";
 
 export const routes = [
   {
@@ -39,7 +46,24 @@ export const routes = [
       {
         path: "/admin",
         component: Admin,
-        routes: []
+        routes: [
+          {
+            path: "/admin/comment",
+            component: CommentAdmin
+          },
+          {
+            path: "/admin/content",
+            component: ContentAdmin
+          },
+          {
+            path: "/admin/fans",
+            component: FansAdmin
+          },
+          {
+            path: "/admin/source",
+            component: SourceAdmin
+          }
+        ]
       },
       {
         path: "/develop",

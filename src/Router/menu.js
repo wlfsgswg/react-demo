@@ -2,7 +2,7 @@
 export const home = {};
 // 发布 released
 export const released = {
-  title: "发布管理",
+  title: "发布",
   list: [
     {
       title: "图文",
@@ -27,6 +27,28 @@ export const released = {
     {
       title: "问答",
       path: "/released/question"
+    }
+  ]
+};
+// 管理
+export const admin = {
+  title: "管理",
+  list: [
+    {
+      title: "内容管理",
+      path: "/admin/content"
+    },
+    {
+      title: "评论管理",
+      path: "/admin/comment"
+    },
+    {
+      title: "粉丝管理",
+      path: "/admin/fans"
+    },
+    {
+      title: "素材管理",
+      path: "/admin/source"
     }
   ]
 };

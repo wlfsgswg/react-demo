@@ -1,14 +1,10 @@
 import React, { Component } from "react";
-import { renderRoutes } from "react-router-config";
-
+import { admin } from "./../../Router/menu.js";
+import { RenderRouter } from "./../../components/index.js";
 class Admin extends Component {
   render() {
-    return (
-      <div className="wlf-home">
-        <div className="p-b-20">Admin</div>
-        <div>{renderRoutes(this.props.route.routes)}</div>
-      </div>
-    );
+    const { route } = this.props;
+    return <RenderRouter menu={admin} router={route.routes} />;
   }
 }
 
