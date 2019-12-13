@@ -22,7 +22,10 @@ class RenderRouter extends Component {
     list.map(it => {
       if (it.path === path) focus = it.path;
     });
-    if (!focus) focus = list[0].path;
+    if (!focus) {
+      focus = list[0].path;
+      this.props.history.push(list[0].path);
+    }
     this.setState({ focus });
   }
 

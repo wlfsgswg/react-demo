@@ -49,19 +49,28 @@ export const routes = [
         routes: [
           {
             path: "/admin/comment",
+            exact: true,
             component: CommentAdmin
           },
           {
             path: "/admin/content",
+            exact: true,
             component: ContentAdmin
           },
           {
             path: "/admin/fans",
+            exact: true,
             component: FansAdmin
           },
           {
             path: "/admin/source",
+            exact: true,
             component: SourceAdmin
+          },
+          {
+            path: "/admin/comment/:id",
+            exact: true,
+            component: Login
           }
         ]
       },
@@ -91,26 +100,32 @@ export const routes = [
         routes: [
           {
             path: "/released/article",
+            exact: true,
             component: ArticleReleased
           },
           {
             path: "/released/atlas",
+            exact: true,
             component: AtlasReleased
           },
           {
             path: "/released/video",
+            exact: true,
             component: VideoReleased
           },
           {
             path: "/released/dynamic",
+            exact: true,
             component: DynamicReleased
           },
           {
             path: "/released/compilation",
+            exact: true,
             component: CompilationReleased
           },
           {
             path: "/released/question",
+            exact: true,
             component: QuestionReleased
           }
         ]
@@ -127,7 +142,3 @@ export const routes = [
     component: NotFound
   }
 ];
-
-export const menuItem = routes[1].routes;
-
-// export const defaultRoute = routes[1].routes ? routes[1].routes[0] : routes[0];
