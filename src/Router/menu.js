@@ -5,7 +5,7 @@ export const released = {
   title: "发布管理",
   list: [
     {
-      title: "文章",
+      title: "图文",
       path: "/released/article"
     },
     {
@@ -23,6 +23,10 @@ export const released = {
     {
       title: "合辑",
       path: "/released/compilation"
+    },
+    {
+      title: "问答",
+      path: "/released/question"
     }
   ]
 };

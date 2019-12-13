@@ -3,13 +3,13 @@ import {
   Login,
   NotFound,
   Menu,
-  Analysis,
   Develop,
-  Interaction,
   Profit,
-  Question,
   Released,
-  Tool
+  Admin,
+  Message,
+  Data,
+  Account
 } from "../container/index.js";
 // 首页
 // 发布
@@ -18,7 +18,8 @@ import {
   AtlasReleased,
   CompilationReleased,
   DynamicReleased,
-  VideoReleased
+  VideoReleased,
+  QuestionReleased
 } from "./../container/Released/children.js";
 
 export const routes = [
@@ -36,8 +37,8 @@ export const routes = [
         routes: []
       },
       {
-        path: "/analysis",
-        component: Analysis,
+        path: "/admin",
+        component: Admin,
         routes: []
       },
       {
@@ -46,8 +47,8 @@ export const routes = [
         routes: []
       },
       {
-        path: "/interaction",
-        component: Interaction,
+        path: "/message",
+        component: Message,
         routes: []
       },
       {
@@ -56,8 +57,8 @@ export const routes = [
         routes: []
       },
       {
-        path: "/question",
-        component: Question,
+        path: "/account",
+        component: Account,
         routes: []
       },
       {
@@ -83,12 +84,16 @@ export const routes = [
           {
             path: "/released/compilation",
             component: CompilationReleased
+          },
+          {
+            path: "/released/question",
+            component: QuestionReleased
           }
         ]
       },
       {
-        path: "/tool",
-        component: Tool,
+        path: "/data",
+        component: Data,
         routes: []
       }
     ]

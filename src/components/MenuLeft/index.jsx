@@ -19,33 +19,33 @@ const menu = [
   },
   {
     key: 2,
-    icon: "icon-tiwen",
-    text: "问答",
-    path: "/question"
+    icon: "icon-guanli",
+    text: "管理",
+    path: "/admin"
   },
   {
     key: 3,
-    icon: "icon-gongju",
-    text: "工具",
-    path: "/tool"
+    icon: "icon-message",
+    text: "消息",
+    path: "/message"
   },
   {
     key: 4,
-    icon: "icon-fenxi",
-    text: "分析",
-    path: "/analysis"
+    icon: "icon-shujuhuizong",
+    text: "数据",
+    path: "/data"
   },
   {
     key: 5,
-    icon: "icon-iconfontwanyouxi",
-    text: "互动",
-    path: "/interaction"
-  },
-  {
-    key: 6,
     icon: "icon-shouyi",
     text: "收益",
     path: "/profit"
+  },
+  {
+    key: 6,
+    icon: "icon-zhanghao",
+    text: "账号",
+    path: "/account"
   },
   {
     key: 7,
