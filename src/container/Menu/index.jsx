@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { renderRoutes } from "react-router-config";
 import { classPrefix } from "./../../const/index.js";
 import { MenuLeft } from "./../../components/index.js";
-import { Layout, Row, Col } from "antd";
+import { Layout } from "antd";
 import "./index.less";
 const { Sider, Content, Header, Footer } = Layout;
 

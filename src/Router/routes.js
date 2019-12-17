@@ -142,3 +142,5 @@ export const routes = [
     component: NotFound
   }
 ];
+
+export const defaultRoutes = routes[1].routes;
