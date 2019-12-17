@@ -46,6 +46,7 @@ export const routes = [
       {
         path: "/admin",
         component: Admin,
+        defaultRouter: 0,
         routes: [
           {
             path: "/admin/comment",
@@ -97,6 +98,7 @@ export const routes = [
       {
         path: "/released",
         component: Released,
+        defaultRouter: 0,
         routes: [
           {
             path: "/released/article",
