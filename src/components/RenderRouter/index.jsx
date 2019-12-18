@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { renderRoutes } from "react-router-config";
-import { Link, withRouter } from "react-router-dom";
+import { renderRoutes, matchRoutes } from "react-router-config";
+import { Link, withRouter, Route } from "react-router-dom";
 import { classPrefix } from "./../../const/index.js";
 import { routeMatching } from "./../../util/index.js";
 import { Layout } from "antd";
@@ -10,7 +10,9 @@ class RenderRouter extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      focus: ""
+      focus: "",
+      MatchRoute: [],
+      defaultRoute: {}
     };
   }
 
@@ -31,8 +33,15 @@ class RenderRouter extends Component {
 
   render() {
     const { menu, router } = this.props;
-    const { focus } = this.state;
+    let { focus } = this.state;
     const list = menu.list;
+    const defaultRoute = router.length ? router[0] : {};
+    const MatchRoute = matchRoutes(
+      router ? router : [],
+      window.location.pathname
+    );
+    console.log(defaultRoute, MatchRoute);
+    focus = MatchRoute.length ? MatchRoute[0].route.path : defaultRoute.path;
 
     return (
       <div className={`${classPrefix}-component-render`}>
@@ -59,7 +68,11 @@ class RenderRouter extends Component {
             </Sider>
             <Layout>
               <Content className="render-content">
-                {renderRoutes(router)}
+                {MatchRoute.length ? (
+                  renderRoutes(router, { defaultRoute })
+                ) : (
+                  <Route component={defaultRoute.component} />
+                )}
               </Content>
             </Layout>
           </Layout>

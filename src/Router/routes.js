@@ -49,14 +49,14 @@ export const routes = [
         defaultRouter: 0,
         routes: [
           {
-            path: "/admin/comment",
-            exact: true,
-            component: CommentAdmin
-          },
-          {
             path: "/admin/content",
             exact: true,
             component: ContentAdmin
+          },
+          {
+            path: "/admin/comment",
+            exact: true,
+            component: CommentAdmin
           },
           {
             path: "/admin/fans",
