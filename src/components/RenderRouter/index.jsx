@@ -17,7 +17,8 @@ class RenderRouter extends Component {
   }
 
   componentDidMount() {
-    const { menu } = this.props;
+    const { menu, router } = this.props;
+    console.log(router);
     const list = menu.list;
     let focus = "";
     const path = routeMatching(this.props.location.pathname, 2);
@@ -40,7 +41,6 @@ class RenderRouter extends Component {
       router ? router : [],
       window.location.pathname
     );
-    console.log(defaultRoute, MatchRoute);
     focus = MatchRoute.length ? MatchRoute[0].route.path : defaultRoute.path;
 
     return (
