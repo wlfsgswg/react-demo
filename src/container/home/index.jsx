@@ -10,7 +10,26 @@ class Home extends Component {
     };
   }
   componentDidMount() {
-    console.log(this.props);
+    const obj = new Object({ name: "王六锋", sex: "男", age: "27" });
+    Object.defineProperty(obj, "st", {
+      configurable: false,
+      enumerable: false,
+      value: "任意类型的值",
+      writable: false
+    });
+
+    // Object.defineProperty(obj, "st", {
+    //   configurable: true,
+    //   enumerable: true,
+    //   value: "任意类型的值",
+    //   writable: true
+    // });
+    // obj.st = "1";
+    // delete obj.st;
+    console.log(obj);
+    for (let i in obj) {
+      console.log(i, obj[i]);
+    }
   }
   render() {
     const { hi } = this.props;
