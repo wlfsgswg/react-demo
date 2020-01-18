@@ -23,9 +23,17 @@
         ],
         [
             "@babel/plugin-proposal-class-properties",
+            
             {
                 "loose": true
             }
-        ]
+        ],
+       [
+        //可选链编译
+        "@babel/plugin-proposal-optional-chaining"
+       ],
+       [
+        "@babel/plugin-proposal-nullish-coalescing-operator"
+       ]
     ]
 }
