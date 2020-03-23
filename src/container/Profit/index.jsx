@@ -7,6 +7,7 @@ class Profit extends Component {
       <div className="wlf-home">
         <div className="p-b-20">Profit</div>
         <div>{renderRoutes(this.props.route.routes)}</div>
+        <div>哈哈哈哈</div>
       </div>
     );
   }
