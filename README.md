@@ -8,6 +8,7 @@
 
 2.nginx
 
+
 ## 安装
 
 1.安装node_module
